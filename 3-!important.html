@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>bupd</title>
 	<style type="text/css">
+		html,body{
+			height: 100%;
+		}
 		#bupdhead{
 			background-color: #d0e4fe;
 			height: 60px;
@@ -14,23 +18,27 @@
 
 		}
 		#left{
-			line-height: 30px;
-			background-color: #F5FFFA;
-			height:500; 
-			width:300;
+			
+			background-color: gray;
+			height:100%; 
+			width:30%;
 			float: left;
+			
 		}
 		#right{
-			background-color: #ADD8E6;
-			height:500;
-			width: 700;
-			float: right;
+			background-color: #ADD8E6;	
+			height:100%; 
+			width: 70%;
+			float: left;
+			
 		}
-		#foot{
+		#footer{
 			background-color: #FF0000;
-			height:20;
-			width:1000;
-			float: bottom;
+			clear: both;/*左侧和右侧均不允许出现浮动元素*/
+			text-align: center;
+			padding: 5px;
+			bottom: 5px;
+			
 		}
 	</style>
 </head>
@@ -40,15 +48,15 @@
 	</div>
 
 	<div id="left">
-		11111
+		<p>menu</p>
 	</div>
 
 	<div id="right">
-		
+		<p>map</p>
 	</div>
 
-	<div id="foot">
-		
+	<div id="footer">
+		Copyright sunhao.com
 	</div>
 
 </body>
