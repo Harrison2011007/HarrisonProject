@@ -4,18 +4,68 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>bupd</title>
 	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
 		html,body{
 			height: 100%;
+			margin: 0px;
 		}
+		/* 搜索框的css */
+		#searchBar{
+			background-color: #ADD8E6;
+			height: 30px;
+					
+		}		
+		.searchInput{
+			margin-top: 5px;
+			margin-left: 80%;
+			height: 18px;
+			border-style: none;	
+
+		}
+		.searchButton{
+			
+			border-style: none;
+		}
+		.searchIcon{
+			
+			height: 15px;
+			padding: 0px;
+		
+		}
+		/* 标题栏的css */
 		#bupdhead{
-			background-color: #d0e4fe;
-			height: 60px;
+			background-color: #ffffff;
+			height: 100px;
+			width: 960px;
+			margin: 10px auto;
+			list-style: solid;
+			float: center;
+		}
+		#bupdhead ul{
+			display: block;
+			list-style: none;
+			float: right;
+			
+			
+		}
+		#bupdhead ul li{
+			border:1px solid rgba(255, 255, 255, 1);
+			float: left;
+			width: 120px;
+			height: auto;
+			line-height: 100px;
+			text-align: center;
+			background-color: rgba(255, 255, 255,0);
 		}
 		#logo{
-			height: 50px;
-			width: 50px;
-			padding-top: 5px;
-
+			height: auto;
+			width: auto;
+			padding-top: 20px;
+			
+		
 		}
 		#left{
 			
@@ -40,11 +90,41 @@
 			bottom: 5px;
 			
 		}
+		.dropdown active{
+			position: relative;
+			display: inline-block;
+		}
+		.dropdown-content{
+			display: none;
+			position: absolute;
+			background-color: rgb(58, 47, 31);
+			box-shadow: brown;
+		}
 	</style>
+	<!-- <script src="./node_modules//geocoortransform//index.js"> -->
+<script src="./index.js" type="module"></script>
+
 </head>
 <body>
+	<div id="searchBar">
+		<input type="text" class="searchInput"placeholder="请输入关键字"><button class="searchButton"  ><img class="searchIcon" src = "./image/search.png"></button>
+	</div>
 	<div id="bupdhead">
-		<img id="logo" src="../image/logo.png" alt="BUPD">
+		<a href="firstweb.html"><img id="logo" src="./image/logo.gif" alt="BUPD"></a>
+		<ul>
+			<li class="dropdown active"><a href="#">关于我们<span>About Us</span></a>
+				<ul class="dropdown-content">
+					<li><a href="#">企业简介</a></li>
+					<li><a href="#">组织架构</a></li>
+					<li><a href="#">资质证书</a></li>
+					<li><a href="#">联系我们</a></li>
+				</ul>
+			</li>
+			<li><a href="#">新闻动态</a></li>
+			<li><a href="#">项目推介</a></li>
+			<li><a href="#">人才招聘</a></li>
+		</ul>
+		
 	</div>
 
 	<div id="left">
@@ -58,6 +138,25 @@
 	<div id="footer">
 		Copyright sunhao.com
 	</div>
+	<script>
+		// console.log(111);
+for(let i = 0; i++; i<=10){
+	console.log(i);
+	setTimeout(()=>{
+		console.log(i);
+	},1000);
+}
+
+
+
+		// class Animal {
+
+		// }
+		// let coor = [117,39];
+		// let newCoor = geocoortransform.gcj2wgs(coor[0],coor[1]);
+		// console.log(newCoor);
+
+	</script>
 
 </body>
 </html>
